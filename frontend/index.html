@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kampala Clean City</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <form id="report-form" enctype="multipart/form-data">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br>
+
+        <button type="submit">Submit Report</button>
+    </form>
+
+    <div id="chart-container">
+        <canvas id="stats-chart"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Node.js specific
+node_modules/
+/node_modules
+npm-debug.log
+
+# Editor config files
+*.swp
+*.bak
+*.tmp
+*.log
+*.sync
+*.suo
+*.nwb
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+
+# Package managers
+.lock
+package-lock.json
+yarn.lock
+
+# Build output
+/dist
+/build
