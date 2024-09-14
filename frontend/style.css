@@ -1,12 +1,15 @@
-/* Apply a gradient background with a glowing effect */
+/* Apply a gradient background with a glowing effect and bubbles */
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, orange, yellow, green);
+    overflow: hidden;
+    position: relative;
     animation: glow 3s infinite;
 }
 
@@ -15,6 +18,76 @@ body {
     0% { filter: brightness(1); }
     50% { filter: brightness(1.2); }
     100% { filter: brightness(1); }
+}
+
+/* Add bubbles animation */
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: rise infinite;
+    opacity: 0.7;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* Create bubbles in different sizes, speeds, and positions */
+.bubble:nth-child(1) {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+.bubble:nth-child(2) {
+    left: 20%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+    left: 30%;
+    width: 35px;
+    height: 35px;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+/* Add more bubbles as needed */
+.bubble:nth-child(4) {
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 11s;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+/* Heading style */
+h1 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Centering the form */
@@ -35,13 +108,14 @@ body {
     display: block;
 }
 
-/* Styling the form inputs */
+/* Spacing between input fields */
 #report-form input[type="text"],
 #report-form textarea,
+#report-form input[type="file"],
 #report-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
@@ -74,4 +148,18 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Generate multiple bubbles */
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bubble-container div {
+    position: absolute;
+    bottom: 0;
 }
