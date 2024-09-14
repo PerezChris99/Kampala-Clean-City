@@ -65,7 +65,6 @@ body {
     animation-duration: 8s;
     animation-delay: 4s;
 }
-/* Add more bubbles as needed */
 .bubble:nth-child(4) {
     left: 50%;
     width: 30px;
@@ -73,7 +72,6 @@ body {
     animation-duration: 11s;
     animation-delay: 6s;
 }
-
 .bubble:nth-child(5) {
     left: 70%;
     width: 50px;
@@ -88,6 +86,7 @@ h1 {
     color: white;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 /* Centering the form */
@@ -98,6 +97,7 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 100%;
+    margin: 0 auto;  /* Center the form */
 }
 
 /* Styling the form labels */
@@ -113,12 +113,15 @@ h1 {
 #report-form textarea,
 #report-form input[type="file"],
 #report-form select {
-    width: 100%;
+    width: calc(100% - 20px);  /* Adjust width to fit the container */
     padding: 10px;
     margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    display: block;
 }
 
 /* Style for submit button */
@@ -140,15 +143,7 @@ h1 {
 }
 
 /* Style the chart container */
-#chart-container {
-    margin-top: 20px;
-    width: 80%;
-    max-width: 600px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 /* Generate multiple bubbles */
 .bubble-container {
