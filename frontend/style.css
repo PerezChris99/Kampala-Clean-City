@@ -1,0 +1,77 @@
+/* Apply a gradient background with a glowing effect */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, orange, yellow, green);
+    animation: glow 3s infinite;
+}
+
+/* Glowing animation for the background */
+@keyframes glow {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+    100% { filter: brightness(1); }
+}
+
+/* Centering the form */
+#report-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Styling the form labels */
+#report-form label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Styling the form inputs */
+#report-form input[type="text"],
+#report-form textarea,
+#report-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Style for submit button */
+#report-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+#report-form button:hover {
+    background-color: darkgreen;
+}
+
+/* Style the chart container */
+#chart-container {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
